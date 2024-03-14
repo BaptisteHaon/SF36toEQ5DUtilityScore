@@ -9,7 +9,7 @@ Maintainer: Baptiste Haon <baptiste.haon@psemail.eu>
 Description: The SF-36 questionnaire is the most widely used generic Health-Related Quality of Life questionnaire. However, it is a non-preference-based instrument and cannot be directly used to compute utility scores. We propose a mapping function from the SF-36 questionnaire to the EQ-5D-5L index to predict EQ-5D utility values when only the SF-36 questionnaire is collected using 3 different methods.
 License: GPL-3
 Encoding: UTF-8
-Depends: R (>= 4.2.2)
+Depends: R (>= 4.2.1)
 Suggests: 
     testthat (>= 3.0.0)
 Config/testthat/edition: 3
