@@ -1,0 +1,33 @@
+---
+output:
+  pdf_document: default
+  html_document: default
+---
+\section{SF36 data to be passed to the functions}
+
+Columns must be named as follows. The order is not important.
+\begin{itemize}
+\item PF Physical Functionning score ranging from 0 to 1
+\item RP Role limitations due to Physical health score ranging from 0 to 1
+\item BP Bodily Pain score ranging from 0 to 1
+\item GH General Health score ranging from 0 to 1
+\item VT Vitality score ranging from 0 to 1
+\item SF Social Functioning score ranging from 0 to 1
+\item RE Role limitations due to Emotional problems score ranging from 0 to 1
+\item MH General Mental Health score ranging from 0 to 1,
+\item AGE Patient's age
+\item GENDER Patient's gender coded as male=1 and female=2.
+\end{itemize}
+
+\section{OLS}
+
+OLS models were carried out with a stepwise approach, using forward selection then backward elimination. This statistical technique aimed to select relevant explanatory variables among first-degree, second-degree and interactions of the considered variables. The selection of a subset of predictor variables was based on their statistical significance and contribution to the prediction of the dependent variable, using here the AIC criterion. 
+
+\section{MARS}
+
+MARS works by constructing a series of piecewise linear segments, or "splines," that approximate the relationship between the explanatory variables and the explained variable. The number and location of the splines are determined through a process of forward and backward stepwise regression, in which candidate spline locations are added or removed based on their impact on the model's performance. MARS models have two hyperparameters to be tuned to achieve good predictive performance: the maximum degree of the terms and the maximum number of terms in the model (including the intercept).
+ Models with first degree only and with the first and second degrees were tested. The maximum number of terms was set from 1 to 25, as recommended. To measure the variable importance, we assess the contribution of each predictor by measuring the impact on the model's performance (RMSE) when that variable is omitted.
+
+\section{GBT}
+
+Compared with alternative machine learning algorithms, GBT is particularly well-suited for problems with complex relationships between the explanatory variables and the explained variable, even though it is more sensitive to overfitting. This relatively new method was recently used for mapping the Cancer Quality of Life Questionnaire Core 30 onto the EQ-5D 5L utility score[18]. While the RF consists of creating several parallel trees, GBT involves a sequence of trees. The algorithm initiates by constructing a single decision tree, used for making predictions from the data. Subsequently, the algorithm computes the residuals, and another decision tree is then built to predict the residuals of the previous tree. The final prediction is obtained by adding the predictions of all the trees in the sequence. The hyperparameters of GBT models are the number of trees, the shrinkage rate, the maximum depth of interactions between variables and the minimum number of observations per final node. The shrinkage rate is a regularization technique that controls the contribution of each individual tree in the ensemble. A smaller shrinkage rate implies that each tree has a smaller impact on the final prediction, making the learning process more gradual. This can help to prevent overfitting and enhance the model's generalization ability. However, it may require more iterations (more trees) to achieve the desired level of accuracy. The maximum depth of interactions and the minimum number of observations per final node are additional measures to prevent overfitting. In our case, the number of trees was set to 200, the shrinkage rate to 0.05, the maximum depth of interactions to 3 and the minimum number of observations per final node to 10. The contribution of each explanatory variable was computed with the same method as for the RF models.

@@ -1,0 +1,16 @@
+Package: SF36toEQ5DUtilityScore
+Title: MAPPING SF-36 DIMENSION SCORES ONTO EQ-5D-5L UTILITY SCORE USING DATA FROM A FRENCH COHORT
+Version: 0.0
+Authors@R: 
+    c(person("Pauline", "CHAUVIN", email="pauline.chauvin@u-paris.fr", role = c("aut"), comment = c(ORCID = "0000-0002-8183-3164")),
+    person("Baptiste", "HAON", email="baptiste.haon@psemail.eu", role = c("cre"), comment = c(ORCID = "0009-0006-0977-0919"))
+    )
+Maintainer: Baptiste Haon <baptiste.haon@psemail.eu>
+Description: The SF-36 questionnaire is the most widely used generic Health-Related Quality of Life questionnaire. However, it is a non-preference-based instrument and cannot be directly used to compute utility scores. We propose a mapping function from the SF-36 questionnaire to the EQ-5D-5L index to predict EQ-5D utility values when only the SF-36 questionnaire is collected using 3 different methods.
+License: GPL-3
+Encoding: UTF-8
+Depends: R (>= 4.2.3)
+Suggests: 
+    testthat (>= 3.0.0)
+Config/testthat/edition: 3
+RoxygenNote: 7.2.3
