@@ -1,13 +1,13 @@
-#'@param SF36_matrix Columns must be named as follows. The order is not important.
-#'PF Physical Functionning score ranging from 0 to 1
-#'RP Role limitations due to Physical health score ranging from 0 to 1
-#'BP Bodily Pain score ranging from 0 to 1
-#'GH General Health score ranging from 0 to 1
-#'VT Vitality score ranging from 0 to 1
-#'SF Social Functioning score ranging from 0 to 1
-#'RE Role limitations due to Emotional problems score ranging from 0 to 1
-#'MH General Mental Health score ranging from 0 to 1,
-#'AGE Patient's age
+#'@param SF36_matrix Columns must be named and coded as follows. The order is not important.
+#'PF Physical Functionning score ranging from 0 to 100
+#'RP Role limitations due to Physical health score ranging from 0 to 100
+#'BP Bodily Pain score ranging from 0 to 100
+#'GH General Health score ranging from 0 to 100
+#'VT Vitality score ranging from 0 to 100
+#'SF Social Functioning score ranging from 0 to 100
+#'RE Role limitations due to Emotional problems score ranging from 0 to 100
+#'MH General Mental Health score ranging from 0 to 100
+#'AGE Patient's age ranging from 0 to 110
 #'GENDER Patient's gender coded as male=1 and female=2.
 #'@export OLS_mapping
 #'@export MARS_mapping
