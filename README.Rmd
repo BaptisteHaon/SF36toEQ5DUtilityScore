@@ -7,15 +7,15 @@ output:
 
 Columns must be named as follows. The order is not important.
 \begin{itemize}
-\item PF Physical Functionning score ranging from 0 to 1
-\item RP Role limitations due to Physical health score ranging from 0 to 1
-\item BP Bodily Pain score ranging from 0 to 1
-\item GH General Health score ranging from 0 to 1
-\item VT Vitality score ranging from 0 to 1
-\item SF Social Functioning score ranging from 0 to 1
-\item RE Role limitations due to Emotional problems score ranging from 0 to 1
-\item MH General Mental Health score ranging from 0 to 1,
-\item AGE Patient's age
+\item PF Physical Functionning score ranging from 0 to 100
+\item RP Role limitations due to Physical health score ranging from 0 to 100
+\item BP Bodily Pain score ranging from 0 to 100
+\item GH General Health score ranging from 0 to 100
+\item VT Vitality score ranging from 0 to 100
+\item SF Social Functioning score ranging from 0 to 100
+\item RE Role limitations due to Emotional problems score ranging from 0 to 100
+\item MH General Mental Health score ranging from 0 to 100
+\item AGE Patient's age ranging from 0 to 110
 \item GENDER Patient's gender coded as male=1 and female=2.
 \end{itemize}
 
